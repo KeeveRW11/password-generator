@@ -30,7 +30,7 @@ function generatePassword() {
     window.alert("Password does not fit criteria. Must be between 8 and 128 characters. Please try again.")
   return
   }
-
+  //Create variables and arrays to create prompts and choose from.
   var choseNumbers = window.confirm("Do you want your password to include numbers?")
   var choseSymbols = window.confirm("Do you want your password to include symbols?")
   var choseLCase = window.confirm("Do you want your password to include lower case letter?")
@@ -43,7 +43,7 @@ function generatePassword() {
   var symbols = ["!", "+", "&", "^", "%", "?", "@","#","$"]
   
   var passwordbox = []
-
+  // Create if statements to create password.
   if (choseNumbers === true) {
     passwordbox.push(numbers)
   }
