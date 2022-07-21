@@ -41,25 +41,23 @@ function generatePassword() {
   var uppercase = ["A","B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q","R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
   var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
   var symbols = ["!", "+", "&", "^", "%", "?", "@","#","$"]
- 
-  if (choseLCase === true) {
-    passwordbox.push(lowercase)
-  }
   
-  if (choseUCase === true) {
-    passwordbox.push(uppercase)
-  }
+  var passwordbox = []
 
   if (choseNumbers === true) {
     passwordbox.push(numbers)
   }
-
   if (choseSymbols === true) {
     passwordbox.push(symbols)
   }
+  if (choseLCase === true) {
+    passwordbox.push(lowercase)
+  }
+  if (choseUCase === true) {
+    passwordbox.push(uppercase)
+  }
 
 
-  var passwordbox = []
   var generatedPassword = ""
 
   for (var i = 0; i < passwordLength; i++) {
